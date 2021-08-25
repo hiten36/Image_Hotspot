@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.24s ease;
 }
 html{
     height: 100%;
@@ -30,10 +31,8 @@ body{
     position: relative;
 }
 .box1{
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    opacity: 0;
+    transform: scale(0);
     padding: 1rem;
     width: 50vmin;
     background-color: rgb(236, 236, 236);
@@ -41,12 +40,21 @@ body{
     box-shadow: 0 0 9px rgba(33,33,33,.5); 
     position: absolute;
 }
+
+.box5{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .box11{
     margin-top: 8px;
     background-color: white;
     border-radius: 7px;
     padding: 7px;
     box-shadow: 0 0 9px rgba(33,33,33,.3); 
+    cursor: pointer;
     width: fit-content;
 }
 .img1{
@@ -58,6 +66,9 @@ body{
     height: 100%;
 }
 .in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 55%;
     margin-left: 15px;
 }
@@ -87,20 +98,20 @@ body{
     top: 51%;
 }
 .b1{
-    top: 50%;
-    right: 8%;
+    top: 55%;
+    right: 28%;
 }
 .b2{
-    left: 23%;
-    bottom: 30%;
+    left: 3%;
+    bottom: 37%;
 }
 .b3{
-    left: 22%;
-    top: 36%;
+    left: 2%;
+    top: 41%;
 }
 .b4{
-    left: 46%;
-    top: 51%;
+    left: 26%;
+    top: 55%;
 }
 .dot::after{
     content: "";
@@ -125,5 +136,22 @@ body{
     }
 }
 .active{
-    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+.arrow{
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: rgb(236, 236, 236);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+.b2 .arrow{
+    top: auto;
+    left: 47%;
+    bottom: 0;
+    border-top-color: rgb(236, 236, 236);
+    border-bottom-color: transparent;
+    transform: translate(50%,100%);
 }
